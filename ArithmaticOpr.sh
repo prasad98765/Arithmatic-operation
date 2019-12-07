@@ -5,6 +5,7 @@ read a
 read b
 read c
 
+declare -A allresult
 result=$(( $a + $b * $c ))
 echo $result
  
@@ -16,3 +17,10 @@ echo $result2
 
 result3=$(( $a % $b + $c ))
 echo $result3
+
+allresult[result1]=$result
+allresult[result2]=$result1
+allresult[result3]=$result2
+allresult[result4]=$result3
+
+
