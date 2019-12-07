@@ -44,6 +44,6 @@ done
 for value in ${!resultArray[@]}
 do
 	echo ${resultArray[$value]}
-done | sort -nr 
+done | sort -n 
 
 #echo "${resultArray[@]}"
