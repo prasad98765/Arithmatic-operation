@@ -27,4 +27,23 @@ for (( i=0; i<=4; i++ ))
 do
 	resultArray[$i]="${allresult[result$i]}"
 done
-echo ${resultArray[@]}
+
+#for (( i=0; i<4; i++ ))
+#do
+	#for (( j=0; j<4; j++ ))
+	#do
+       		#if [[ ${resultArray[$i]} -lt ${resultArray[$j]} ]]
+		#then
+			#temp="${resultArray[$i]}"
+			#resultArray[$i]="${resultArray[$j]}"
+			#resultArray[$j]=$temp
+		#fi
+	#done
+#done
+
+for value in ${!resultArray[@]}
+do
+	echo ${resultArray[$value]}
+done | sort -nr 
+
+#echo "${resultArray[@]}"
