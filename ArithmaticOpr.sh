@@ -41,9 +41,17 @@ done
 	#done
 #done
 
+echo "ASC Order"
 for value in ${!resultArray[@]}
 do
 	echo ${resultArray[$value]}
 done | sort -n 
 
-#echo "${resultArray[@]}"
+echo "DESC Order" 
+
+for value in ${!resultArray[@]}
+do
+        echo ${resultArray[$value]}
+done | sort -nr 
+
+
